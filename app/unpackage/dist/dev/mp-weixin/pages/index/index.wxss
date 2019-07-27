@@ -1,0 +1,39 @@
+/* 轮播图 start */
+.home-swiper {
+	width: 100%;
+	height: 440rpx;
+}
+.home-image {
+	width: 100%;
+	height: 100%;
+}
+
+/* 轮播图 end */
+
+/* 热门推荐 start */
+.home-super-hot {
+	margin-top: 12rpx;
+	padding: 20rpx;
+}
+.home-hot-title-wrapper {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+}
+.home-hot-ico {
+	width: 30rpx;
+	height: 30rpx;
+	margin-top: 15rpx;
+	margin-right: 20rpx;
+}
+.home-hot-title {
+	font-size: 20px;
+	font-weight: bold;
+}
+
