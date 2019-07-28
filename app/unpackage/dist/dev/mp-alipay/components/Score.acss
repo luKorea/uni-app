@@ -1,0 +1,24 @@
+
+.score-scroll-ico {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	margin-bottom: 3rpx;
+}
+.score-scroll-ico-star {
+	width: 20rpx;
+	height: 20rpx;
+	margin-top: 5rpx;
+}
+.score-scroll-ico-comment {
+	font-size: 19rpx;
+	color: #999;
+	margin-left: 8rpx;
+}
+

@@ -1,8 +1,9 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/search/search",
-    "pages/profile/profile"
+    "pages/index/index",
+    "pages/profile/profile",
+    "pages/details/details"
   ],
   "subPackages": [],
   "window": {

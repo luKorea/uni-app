@@ -15,8 +15,8 @@
 /* 热门推荐 start */
 
 .home-super-hot {
-	margin-top: 12upx;
-	padding: 20upx;
+	/* margin-top: 12upx; */
+	padding: 15upx;
 }
 
 .home-hot-title-wrapper {
@@ -35,3 +35,127 @@
 	font-size: 20px;
 	font-weight: bold;
 }
+
+.home-hot-scroll {
+	width: 100%;
+	white-space: nowrap;
+	margin-top: 10upx;
+}
+
+.home-hot-scroll-single {
+	display: inline-block;
+	margin-left: 20upx;
+}
+
+.home-hot-scroll-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.home-hot-scroll-img {
+	width: 200upx;
+	height: 270upx;
+}
+
+
+.home-hot-scroll-title {
+	width: 200upx;
+	margin-top: 10upx;
+	font-size: 14px;
+	font-weight: bold;
+	/* 超出省略号 */
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* 热门推荐end */
+
+/* 热门预告 start  */
+
+.home-hot-movie {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 0 20upx 20upx 20upx;
+}
+
+.home-hot-movie-single {
+	width: 350upx;
+	height: 220upx;
+	margin-top: 10upx;
+}
+
+/* 热门预告 end */
+
+/* 猜你喜欢 start */
+
+.home-hobby {
+	display: flex;
+	flex-direction: column;
+}
+
+.home-hobby-sigle {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 30upx 20upx;
+	border-bottom: 1px solid #ccc;
+}
+
+.home-hobby-img {
+	width: 180upx;
+	height: 240upx;
+	border-radius: 3%;
+}
+
+.home-hobby-desc {
+	width: 340upx;
+	display: flex;
+	flex-direction: column;
+}
+
+
+.home-hobby-desc-title {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.home-hobby-desc-info {
+	color: #808080;
+	font-size: 14px;
+}
+
+/* 猜你喜欢 end */
+
+
+/* 点赞 start */
+.home-hobby-options {
+	width: 140upx;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border-left: dashed 2px;
+	border-left-color: #dbdbda;
+}
+
+.home-hobby-options-ico {
+	width: 40upx;
+	height: 40upx;
+	align-self: center;
+}
+
+.home-hobby-options-me {
+	font-size: 14px;
+	color: #feab2a;
+	align-self: center;
+}
+
+.animation-opacity {
+	font-weight: bold;
+	opacity: 0;
+}
+
+/* 点赞 end */
