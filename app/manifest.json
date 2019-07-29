@@ -1,6 +1,6 @@
 {
     "name" : "app",
-    "appid" : "",
+    "appid" : "__UNI__3514120",
     "description" : "",
     "versionName" : "1.0.0",
     "versionCode" : "100",
@@ -15,7 +15,9 @@
             "delay" : 0
         },
         /* 模块配置 */
-        "modules" : {},
+        "modules" : {
+            "Share" : {}
+        },
         /* 应用发布信息 */
         "distribute" : {
             /* android打包配置 */
@@ -48,7 +50,14 @@
             /* ios打包配置 */
             "ios" : {},
             /* SDK配置 */
-            "sdkConfigs" : {}
+            "sdkConfigs" : {
+                "share" : {
+                    "weixin" : {
+                        "appid" : "wx7598238978b26529",
+                        "appsecret" : "253dca20747a4c31d37ed900e3c96c54"
+                    }
+                }
+            }
         }
     },
     /* 快应用特有相关 */

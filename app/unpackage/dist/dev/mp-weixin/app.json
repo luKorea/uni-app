@@ -1,9 +1,17 @@
 {
   "pages": [
-    "pages/search/search",
     "pages/index/index",
+    "pages/search/search",
     "pages/profile/profile",
-    "pages/details/details"
+    "pages/details/details",
+    "pages/cover/cover",
+    "pages/registLogin/registLogin",
+    "pages/meInfo/meInfo",
+    "pages/meFace/meFace",
+    "pages/meBirthday/meBirthday",
+    "pages/meNickname/meNickname",
+    "pages/sex/sex",
+    "pages/faceCrop/faceCrop"
   ],
   "subPackages": [],
   "window": {

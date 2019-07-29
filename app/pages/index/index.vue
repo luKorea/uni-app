@@ -4,7 +4,9 @@
 		<swiper class="home-swiper" indicator-dots="true" autoplay="true" circular="true" indicator-color="#fff"
 		 indicator-active-color="#1296db">
 			<swiper-item v-for="swiper in swipeImgUrl" :key="swiper.movieId">
-				<image :src="swiper.image" class="home-image"></image>
+				<navigator open-type="navigate" :url="'../details/details?trailerId=' + swiper.movieId">
+					<image :src="swiper.image" class="home-image"></image>
+				</navigator>
 			</swiper-item>
 		</swiper>
 		<!-- 轮播图 end -->
@@ -21,7 +23,9 @@
 		<scroll-view class="home-hot-scroll page-block" scroll-x>
 			<view class="home-hot-scroll-single" v-for="hot in hotImgUrl" :key="hot.id">
 				<view class="home-hot-scroll-wrapper">
-					<image class="home-hot-scroll-img" :src="hot.cover"></image>
+					<navigator open-type="navigate" :url="'../details/details?trailerId=' + hot.id">
+						<image :src="hot.cover" class="home-hot-scroll-img"></image>
+					</navigator>
 					<view class="home-hot-scroll-title">{{hot.name}}</view>
 					<score :innerScore="hot.score" showScore='1'></score>
 				</view>
@@ -39,8 +43,8 @@
 			</view>
 		</view>
 		<view class="home-hot-movie page-block">
-			<video class="home-hot-movie-single" v-for="trailer in trailerImgUrl" :key='trailer.id' :src="trailer.trailer"
-			 :poster="trailer.poster" controls></video>
+			<video :id="trailer.id" class="home-hot-movie-single" v-for="trailer in trailerImgUrl" :key='trailer.id' :src="trailer.trailer"
+			 :poster="trailer.poster" @play="playVideo(trailer.id)" controls></video>
 		</view>
 		<!-- 热门预告 end -->
 
@@ -55,7 +59,10 @@
 		</view>
 		<view class="home-hobby page-block">
 			<view class="home-hobby-sigle" v-for="(hobby, gIndex) in hobbyImgUrl" :key='hobby.id'>
-				<image class="home-hobby-img" :src="hobby.poster"></image>
+
+				<navigator open-type="navigate" :url="'../details/details?trailerId=' + hobby.id">
+					<image :src="hobby.cover" class="home-hobby-img"></image>
+				</navigator>
 				<view class="home-hobby-desc">
 					<view class="home-hobby-desc-title">{{hobby.name}}</view>
 					<score :innerScore="hobby.score" showScore='0'></score>
@@ -113,6 +120,11 @@
 		},
 		onPullDownRefresh() {
 			this.getHobbyData();
+		},
+		onHide() {
+			if (this.videoContext) {
+				this.videoContext.pause();
+			}
 		},
 		methods: {
 			// TODO 获取轮播图数据
@@ -173,7 +185,7 @@
 					title: '加载中',
 					mask: true
 				});
-				
+
 				uni.request({
 					url: `${this.serverURL}/index/guessULike`,
 					method: "POST",
@@ -215,6 +227,16 @@
 					this.animationDataArr[gIndex] = this.animationData.export();
 				}, 500)
 				// #endif
+			},
+			playVideo(id) {
+				this.videoContext = uni.createVideoContext(id);
+				let trailer = this.trailerImgUrl;
+				for (let i = 0; i < trailer.length; i++) {
+					let tempID = trailer[i].id;
+					if(tempID != id) {
+						uni.createVideoContext(tempID).pause();
+					}
+				}
 			}
 		}
 	}

@@ -1,12 +1,6 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
-			"path": "pages/search/search",
-			"style": {
-				"navigationBarTitleText": "搜索预告片"
-			}
-		},
-		{
 			"path": "pages/index/index",
 			"style": {
 				// TODO H5取消顶部导航栏
@@ -16,17 +10,69 @@
 				// TODO 开启下拉刷新
 				"enablePullDownRefresh": true
 			}
+		},
+		{
+			"path": "pages/search/search",
+			"style": {
+				"navigationBarTitleText": "搜索预告片"
+			}
 		}, {
 			"path": "pages/profile/profile",
 			"style": {
-				"navigationBarTitleText": "个人资料"
+				"navigationBarTitleText": "个人资料",
+				"navigationBarTextStyle": "white",
+				"navigationBarBackgroundColor": "#FFD655",
+				"backgroundColor": "#ccc",
+				"app-plus": {
+					"titleNView": false
+				}
 			}
+		}, {
+			"path": "pages/details/details",
+			"style": {
+				// TODO H5取消顶部导航栏
+				"app-plus": {
+					"titleNView": {
+						"type": "transparent",
+						"buttons": [{
+							"type": "share"
+						}]
+					}
+				}
+			}
+		}, {
+			"path": "pages/cover/cover",
+			"style": {}
+		},
+		{
+			"path": "pages/registLogin/registLogin",
+			"style": {}
+		},
+		{
+			"path": "pages/meInfo/meInfo",
+			"style": {}
+		},
+		{
+			"path": "pages/meFace/meFace",
+			"style": {}
+		},
+		{
+			"path": "pages/meBirthday/meBirthday",
+			"style": {}
+		},
+		{
+			"path": "pages/meNickname/meNickname",
+			"style": {}
+		},
+		{
+			"path": "pages/sex/sex",
+			"style": {}
+		},
+		{
+			"path": "pages/faceCrop/faceCrop",
+			"style": {}
 		}
-	    ,{
-            "path" : "pages/details/details",
-            "style" : {}
-        }
-    ],
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "电影预告",
